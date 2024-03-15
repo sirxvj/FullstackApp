@@ -1,0 +1,33 @@
+<div class="wrpr card mb-3" routerLink="/members/{{member.username}}" style="max-width: 640px;">
+    <div class="row wrpr no-gutters">
+      <div class="wrpr col-md-4">
+        <img src="{{member.photoUrl || './assets/default-user-icon.jpg'}}" 
+         class="card-img" alt="...">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">{{member.username}}</h5>
+          <p class="card-text">{{member.description}}</p>
+          <p class="card-text"><small class="text-muted">{{lastSeen()}}</small></p>
+          <a href="#" class="btn btn-primary">Chat<i class="fa fa-send-o"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+<!-- <div class="container card m-3 p-3">
+    <div class="row">
+            <div class="col">
+            <img src="{{member.photoUrl!==null?member.photoUrl:'https://static.vecteezy.com/system/resources/thumbnails/009/292/244/small/default-avatar-icon-of-social-media-user-vector.jpg'}}" 
+            alt="" class="rounded-circle"
+            style="border:1px solid;max-width: 100%; ">
+             </div>
+             <div class="col-9">
+                <h1 >{{member.username}}</h1>
+             </div>
+             <button class="btn"><i class="fa fa-home"></i></button>
+        
+    </div>
+</div> -->

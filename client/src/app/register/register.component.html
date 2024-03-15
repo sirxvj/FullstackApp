@@ -1,0 +1,27 @@
+
+<form #registerForm="ngForm" (ngSubmit)="register()" autocomplete="off">
+    <h2 class="text-center ">Sign Up</h2>
+    
+    <div class="form-group mt-2">
+        <input type="text" class="form-control" placeholder="Username" 
+        [(ngModel)]="model.username" name="username">
+    </div>
+    <div class="form-group mt-2">
+        <input type="password" class="form-control" placeholder="Password" 
+        [(ngModel)]="model.password" name="password">
+    </div>
+    <div class="from-group text-center mt-2">
+        <button class="btn btn-success me-1" type="submit">Register</button>
+        <button class="btn btn-light" (click)="cancel()" type="button">Cancel</button>
+    </div>
+</form>
+
+<!-- <div class="container mt-5">
+<h1>Find yr homies</h1>
+
+<div *ngFor="let user of userList"  >
+    <ul>
+    <li>{{user.userName}}</li>
+    </ul>
+</div>
+</div> -->
