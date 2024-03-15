@@ -7,12 +7,12 @@ using Microsoft.EntityFrameworkCore;
 
 namespace API.Data;
 
-public class UserRepository:IUserRepository
+public class UserService:IUserService
 {
     private readonly DataContext _context;
     private readonly IMapper _mapper;
 
-    public UserRepository(DataContext context, IMapper mapper)
+    public UserService(DataContext context, IMapper mapper)
     {
         _context = context;
         _mapper = mapper;
