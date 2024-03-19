@@ -13,8 +13,12 @@ namespace API.Extensions
             {
                 options.UseNpgsql(config.GetConnectionString("DefaultConnection"));
             });
+            services.Configure<CloudinarySettings>(config.GetSection("CloudinarySettings"));
+            
+            services.AddScoped<IPhotoService,PhotoService>();
             services.AddScoped<ITokenService, TokenService>();
             services.AddScoped<IUserService, UserService>();
+            services.AddScoped<IAccountService, AccountService>();
             return services;
         }
     }

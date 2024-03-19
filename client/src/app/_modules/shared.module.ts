@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ToastrModule } from 'ngx-toastr';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
-import { NgxGalleryModule } from '@kolkov/ngx-gallery';
+import { NgxSpinnerModule } from 'ngx-spinner';
 @NgModule({
   declarations: [],
   imports: [
@@ -12,12 +12,14 @@ import { NgxGalleryModule } from '@kolkov/ngx-gallery';
       progressBar : true,
       positionClass:'toast-bottom-right'
     }),
-    NgxGalleryModule
+    NgxSpinnerModule
+    // NgxGalleryModule
   ],
   exports:[
     BsDropdownModule,
     ToastrModule,
-    NgxGalleryModule
+    NgxSpinnerModule
+    // NgxGalleryModule
   ],
 
   providers: []

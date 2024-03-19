@@ -35,4 +35,21 @@ public class UserService:IUserService
     {
         return await _context.Users.ProjectTo<MemberDto>(_mapper.ConfigurationProvider).ToListAsync();
     }
+    public async Task<bool> Update(MemberUpdateDto member,string username){
+
+        var user = await _context.Users.Where(u=>u.UserName==username).FirstOrDefaultAsync();
+        if(user==null || user.UserName != username){
+            return false;
+        }
+        _mapper.Map(member,user);
+        _context.Entry(user).State=EntityState.Modified;
+        await _context.SaveChangesAsync();
+        return true;
+    }
+
+    public async Task SaveChanges(AppUser user)
+    {
+        _context.Users.Entry(user).State = EntityState.Modified;
+        await _context.SaveChangesAsync();
+    }
 }

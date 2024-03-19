@@ -1,6 +1,6 @@
 namespace API.DTOs;
 
-public class MemberDto
+public record MemberDto
 {
     public int Id { get; set; }
     public string Username { get; set; } = null!;

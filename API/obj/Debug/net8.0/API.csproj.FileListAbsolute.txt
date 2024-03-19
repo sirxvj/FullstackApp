@@ -116,3 +116,5 @@
 /home/sicrx/RiderProjects/AyzApp/API/bin/Debug/net8.0/AutoMapper.dll
 /home/sicrx/RiderProjects/AyzApp/API/bin/Debug/net8.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 /home/sicrx/RiderProjects/AyzApp/API/obj/Debug/net8.0/API.sourcelink.json
+/home/sicrx/RiderProjects/AyzApp/API/bin/Debug/net8.0/CloudinaryDotNet.dll
+/home/sicrx/RiderProjects/AyzApp/API/bin/Debug/net8.0/Newtonsoft.Json.dll

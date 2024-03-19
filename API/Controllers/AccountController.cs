@@ -24,7 +24,7 @@ namespace API.Controllers
             _accountService = accountService;
         }
         
-        
+        [HttpPost("register")]
         public async Task<ActionResult<UserDto>> Register([FromBody]RegisterDto user)
         {
            var resultUser = await _accountService.Register(user);

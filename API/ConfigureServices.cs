@@ -15,7 +15,6 @@ public static class ConfigureServices
         services.AddIdentityServices(config);
 
         services.AddAutoMapper(typeof(AutoMapperProfiles).Assembly);
-        
         services.AddSwaggerGen();
         services.AddControllers();
         services.AddCors(options =>
